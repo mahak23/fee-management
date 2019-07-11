@@ -31,8 +31,6 @@
 	<link href="{{ asset('css/waitMe.min.css') }}" rel="stylesheet" type="text/css" />
 	<!-- Datepicker Css -->
 	<link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" />
-	<!-- Fancy Box Css -->
-	<link href="{{ asset('css/jquery.fancybox.min.css') }}" rel="stylesheet" type="text/css" />
 	<!-- Developer Css -->
 	<link href="{{ asset('css/developer.css') }}" rel="stylesheet" type="text/css" />
 	<!-- END THEME STYLES -->
@@ -60,7 +58,7 @@
 			<!-- BEGIN LOGO -->
 			<div class="page-logo">
 				<a href="{{ route('school.dashboard') }}">
-					<img src="{{ asset('/images/logo.png') }}" width="46" alt="env('APP_NAME')" />
+					<img src="{{ asset('/images/logo.png') }}" width="46" alt="{{ env('APP_NAME') }}" />
 				</a>
 				<div class="menu-toggler sidebar-toggler hide">
 				</div>
@@ -77,7 +75,7 @@
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-							<img src="{{ asset('/images/default.jpg') }}" class="img-circle display-profile-image" alt="Profile Pic">
+							<img src="{{ asset('img/avatar.png') }}" class="img-circle display-profile-image" alt="Profile Pic">
 							<span class="username username-hide-on-mobile" id="header_username">
 								{{Auth::user()->first_name}} </span>
 							<i class="fa fa-angle-down"></i>

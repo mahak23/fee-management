@@ -12,8 +12,14 @@
 */
 
 Route::namespace('School')->name('school.')->group(function () {
+    // Login
     Route::get('/', 'AuthController@showLoginForm')->name('login');
     Route::post('/', 'AuthController@login');
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('logout', 'AuthController@logout')->name('logout');
+
+    Route::middleware('school')->group(function () {
+        // Dashboard
+        Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+        // Logout
+        Route::get('logout', 'AuthController@logout')->name('logout');
+    });
 });

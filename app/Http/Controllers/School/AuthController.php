@@ -53,7 +53,7 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        return redirect()->route('school.bashboard');
+        return redirect()->route('school.dashboard');
     }
 
     /**
@@ -65,5 +65,20 @@ class AuthController extends Controller
     protected function credentials(Request $request)
     {
         return $request->only($this->username(), 'password') + ['role' => 2];
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect()->route('school.login');
     }
 }
