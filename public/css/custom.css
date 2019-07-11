@@ -1,0 +1,231 @@
+.addButton{
+	margin-bottom: 10px;
+}
+.td-limit{
+	max-width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.filter-group{
+	width:200px;
+	float:left;
+	margin-left: 20px;
+}
+.filter-button{
+	margin-left:20px !important;
+}
+.help-block{
+	color:white;
+}
+.modal-open .datepicker {
+    z-index:-0.008 !important;
+}
+.margin-top-25{
+	margin-top:25px;
+}
+.margin-bottom-10{
+	margin-top:10px !important;
+	margin-bottom:0px !important;
+}
+.add-options-css{
+	margin-left: 3px;
+	
+}  
+.survey-input{
+	display: inline !important;
+    width: 91% !important;
+} 
+.g-recaptcha{
+	margin-left: 20px;
+}
+.red_color{
+	color:red;
+}
+.blue_color{
+	color:blue;
+}
+.errorsProfile{
+	color: red;
+}
+.cke_dialog_body{
+	z-index:1003 !important;
+}
+.modal{
+z-index: 1000 !important;
+}
+.page-header.navbar.navbar-fixed-top {
+    z-index: 500 !important;
+}
+.waitMe{
+	z-index: 3000 !important;
+}
+.middle-th{
+	vertical-align:middle !important;
+}
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: -25px;
+    top: 1px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+
+.modal-lg {
+    width: 1100px !important;
+}
+.break-word{
+	word-wrap: break-word;
+}
+.light-left-border{
+	    border-left: 1px #e4e4e4 solid;
+}
+
+.new-icon-field{position: relative;}
+.new-icon-field #filtersubmit{
+    position: absolute;
+    z-index: 1;left:auto;
+    right: 30px;
+    top: 6px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+
+.login .content .form-actions .btn-login{
+    padding: 10px 40px !important;
+}
+
+.login .content .login-form, .login .content .forget-form{
+    padding: 0px;
+    margin-bottom: -40px;
+}
+ #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+  
+}
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+    color: green
+}
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+    color: red;
+}
+.valid:before{
+    position: relative;
+    left: 0;
+    content: "\f00c";
+    font-family:'FontAwesome';
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    background: green;
+    text-align: center;
+    padding: 0 !important;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+.invalid::before {
+    position: relative;
+    left: 0;
+    content: "\f00d";
+    font-family:'FontAwesome';
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    background: red;
+    text-align: center;
+    padding: 0 !important;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+::before, ::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#message
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top:130px;
+    border:1px solid #c8c8c8;
+}
+#message h3 {
+margin: 0;
+font-size: 16px;
+padding: 10px 15px;
+text-align: left;
+width: 100%;
+    color: #2c2c2c;
+}
+#message p {
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: left;
+    display: inline-block;
+    width:100%;
+    color: #2c2c2c;
+}
+.invalid::before
+{padding-right: 8px;left: 0;}
+
+input[type="password"].valid:before
+{
+   position: relative;
+    left: 0;
+    content: "f058";
+    font-family:'FontAwesome';
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    background: green;
+    text-align: center;
+    padding: 0 !important;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+.validsecnew
+{
+position: absolute;
+right: 23px;
+top: 84px;
+font-size: 26px;
+color: green;
+ display:none;
+}

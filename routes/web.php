@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('School')->name('school.')->group(function () {
+    Route::get('/', 'AuthController@showLoginForm')->name('login');
+    Route::post('/', 'AuthController@login');
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('logout', 'AuthController@logout')->name('logout');
 });
