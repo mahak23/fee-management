@@ -41,6 +41,7 @@
 		<!-- Waitme JS -->
 		<script src="{{ asset('js/waitMe.min.js') }}" type="text/javascript"></script>
 		<script src="{{ asset('js/bootstrap-fileinput.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('js/bootbox.min.js') }}" type="text/javascript"></script>
 		<script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
 		<!-- developer js common function functions -->
@@ -71,15 +72,7 @@
 							errors = error.responseJSON;
 
 							$.each(errors.errors, function(key, value) {
-								if (key.indexOf('.') != -1) {
-									let keys = key.split('.');
-									let keys_length = keys.length;
-									for (let i = 0; i < keys_length; i++) {
-										$('.' + keys[0]).find('span.error').eq(keys[1]).empty().addClass('text-danger').text(value).finish().fadeIn();
-									}
-								} else {
-									$('.' + key).find('span.error').empty().addClass('text-danger').text(value).finish().fadeIn();
-								}
+								$('span.error.' + key).empty().text(value).finish().fadeIn();
 							});
 						} else if (error.status == 400) {
 							errors = error.responseJSON;

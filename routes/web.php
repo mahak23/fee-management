@@ -21,5 +21,8 @@ Route::namespace('School')->name('school.')->group(function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         // Logout
         Route::get('logout', 'AuthController@logout')->name('logout');
+
+        // Manage Classes
+        Route::resource('class', 'ClassController');
     });
 });

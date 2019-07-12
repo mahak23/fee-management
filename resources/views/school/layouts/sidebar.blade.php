@@ -18,10 +18,16 @@
 				</div>
 				<!-- END SIDEBAR TOGGLER BUTTON -->
 			</li>
-			<li class="start active">
+			<li class="start">
 				<a href="{{ route('school.dashboard') }}">
 					<span><i class="icon-home"></i></span>
 					<span class="title">Dashboard</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="{{ route('school.class.index') }}">
+					<span><i class="icon-home"></i></span>
+					<span class="title">Manage Classes</span>
 				</a>
 			</li>
 		</ul>
