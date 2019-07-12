@@ -5,6 +5,24 @@ Add Class
 @endsection
 
 @section('content')
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ route('school.dashboard') }}">Dashboard</a>
+        </li>
+        <li>
+            <i class="fa fa-angle-right"></i>
+            <a href="{{ route('school.class.index') }}">Manage Classes</a>
+        </li>
+        <li>
+            <i class="fa fa-angle-right"></i>
+            Add Class
+        </li>
+    </ul>
+</div>
+<h3 class="page-title">
+</h3>
 <div class="row">
     <div class="col-md-12">
         <div class="portlet box blue">
@@ -14,7 +32,7 @@ Add Class
                 </div>
             </div>
             <div class="portlet-body form">
-                {{ Form::open(['route' => ['school.class.store'], 'method' => 'post', 'id' => 'addClassForm']) }}
+                {{ Form::open(['route' => ['school.class.store'], 'method' => 'post', 'id' => 'addClassForm', 'autocomplete' => 'off']) }}
                 @include('school.class.form')
             </div>
             <div class="form-actions">

@@ -6,7 +6,18 @@ Manage Classes
 
 @section('content')
 <!-- BEGIN PAGE HEADER-->
-
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ route('school.dashboard') }}">Dashboard</a>
+        </li>
+        <li>
+            <i class="fa fa-angle-right"></i>
+            Manage Classes
+        </li>
+    </ul>
+</div>
 <div class="row margin-bottom-20">
     <div class="col-sm-6">
         <h3 class="page-title">
@@ -20,7 +31,7 @@ Manage Classes
 <!-- END PAGE HEADER-->
 <!-- BEGIN DASHBOARD STATS -->
 <div class="row">
-    {{ Form::open(['method' => 'get', 'id' => 'formFilter', 'name' => 'serach_form']) }}
+    {{ Form::open(['method' => 'get', 'id' => 'formFilter', 'name' => 'serach_form', 'autocomplete' => 'off']) }}
     <div class="col-md-5 col-sm-7">
         <div class="input-icon">
             <i class="fa fa-search"></i>

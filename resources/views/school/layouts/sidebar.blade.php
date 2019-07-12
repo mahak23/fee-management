@@ -18,13 +18,13 @@
 				</div>
 				<!-- END SIDEBAR TOGGLER BUTTON -->
 			</li>
-			<li class="start">
+			<li class="start @if(Route::is('school.dashboard')) active @endif">
 				<a href="{{ route('school.dashboard') }}">
 					<span><i class="icon-home"></i></span>
 					<span class="title">Dashboard</span>
 				</a>
 			</li>
-			<li class="active">
+			<li class="@if(Route::is('school.class.*')) active @endif">
 				<a href="{{ route('school.class.index') }}">
 					<span><i class="icon-home"></i></span>
 					<span class="title">Manage Classes</span>
